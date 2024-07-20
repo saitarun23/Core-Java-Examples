@@ -6,6 +6,7 @@ public class EmployeeTest {
 		
 		System.out.println("Generic employee Information");
 		Employee emp=new Employee();
+		
 		emp.readEmp();
 		emp.disEmp();
 		
@@ -62,6 +63,61 @@ public class EmployeeTest {
 		name is tarun
 		salary is 45000.0
 */
+		
+		System.out.println("------------------------");
+		System.out.println("Developer Information");
+		Developer dev=new Developer();
+		
+		dev.readEmp();
+		dev.disEmp();
+		
+		dev.readDev();
+		dev.disDev();
+		
+/*
+		Output
+		Developer Information
+		Enter the id 
+		4
+		Enter the name
+		saitarun
+		Enter the salary
+		45000
+		id is 4
+		name is saitarun
+		salary is 45000.0
+		Enter the Project Name
+		java
+		Project Name is java
+*/
+		
+		System.out.println("------------------------");
+		System.out.println("Project Manager Information");
+		ProjectManager pmgr=new ProjectManager();
+		
+		pmgr.readEmp();
+		pmgr.readMgr();
+		pmgr.disEmp();
+		
+		pmgr.readPmgr();
+		pmgr.disMgr();
+		pmgr.disPmgr();
+		
+		/*
+		Output
+		Project Manager Information
+		Enter the id 
+		4
+		Enter the name
+		saitarun
+		Enter the salary
+		25000
+		id is 4
+		name is saitarun
+		salary is 25000.0
+		Enter client name
+		IBM
+		Client name is IBM
+		 */
 	}
-
 }
