@@ -19,3 +19,13 @@ public class DataTypes {
 	}
 
 }
+
+/*
+		Output
+		100
+		Value of b is 100
+		Value of c is 100.4
+		Value of d is $
+		Value of result is true
+		name is Akash
+*/
