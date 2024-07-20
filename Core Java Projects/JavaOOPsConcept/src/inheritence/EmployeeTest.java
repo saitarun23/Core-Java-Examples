@@ -28,11 +28,11 @@ public class EmployeeTest {
 		System.out.println("Manager Information");
 		Manager mgr=new Manager();
 		
-		mgr.readEmp();	//id,name,salary
-		mgr.disEmp();	//numberofemp
+		//mgr.readEmp();	//id,name,salary
+		mgr.readMgr();	    //numberofemp
 		
-		mgr.readMgr();	//id,name,salary
-		mgr.disEmp();	//numberofemp
+		//mgr.disEmp();	    //id,name,salary
+		mgr.disMgr();	    //numberofemp
 		
 /*
 		Output
@@ -68,10 +68,10 @@ public class EmployeeTest {
 		System.out.println("Developer Information");
 		Developer dev=new Developer();
 		
-		dev.readEmp();
-		dev.disEmp();
-		
+		//dev.readEmp();
 		dev.readDev();
+		
+		//dev.disEmp();
 		dev.disDev();
 		
 /*
@@ -95,12 +95,12 @@ public class EmployeeTest {
 		System.out.println("Project Manager Information");
 		ProjectManager pmgr=new ProjectManager();
 		
-		pmgr.readEmp();
-		pmgr.readMgr();
-		pmgr.disEmp();
-		
+		//pmgr.readEmp();
+		//pmgr.readMgr();
 		pmgr.readPmgr();
-		pmgr.disMgr();
+		
+		//pmgr.disEmp();
+		//pmgr.disMgr();
 		pmgr.disPmgr();
 		
 		/*
