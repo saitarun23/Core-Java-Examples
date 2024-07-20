@@ -30,3 +30,9 @@ public class InterfaceExample {
 		obj.dis2();
 	}
 }
+
+/*
+	Output
+	Abc interface method
+	Xyz interface method
+*/
