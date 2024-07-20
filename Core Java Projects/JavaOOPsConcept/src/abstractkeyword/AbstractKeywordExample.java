@@ -23,6 +23,7 @@ class Pulsar extends Bike{
 public class AbstractKeywordExample {
 
 	public static void main(String[] args) {
+		//Bike bb=new Bike();
 		Honda hh=new Honda();		hh.speed();		hh.mailage();
 		Pulsar pu=new Pulsar();		pu.speed();		pu.mailage();
 	
