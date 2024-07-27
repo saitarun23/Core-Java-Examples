@@ -11,7 +11,7 @@ class D implements Runnable{
 	@Override
 	public void run() {
 		for(int j=0;j<10;j++) {
-			System.out.println("i "+j);
+			System.out.println("j "+j);
 		}
 	}
 }
@@ -32,12 +32,15 @@ public class ImplementsRunnable {
 
 /*
 	Output
-	i 0
-	i 1
-	i 2
-	i 3
-	i 4
-	i 5
+	j 0
+	j 1
+	j 2
+	j 3
+	j 4
+	j 5
+	j 6
+	j 7
+	j 8
 	i 0
 	i 1
 	i 2
@@ -47,9 +50,6 @@ public class ImplementsRunnable {
 	i 6
 	i 7
 	i 8
-	i 6
-	i 7
-	i 8
-	i 9
+	j 9
 	i 9
 */
