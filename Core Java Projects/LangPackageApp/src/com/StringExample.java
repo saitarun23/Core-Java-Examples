@@ -47,6 +47,28 @@ public class StringExample {
 		Equal
 */
 		
+		String msg="Hello";		// new memory 
+		System.out.println(msg);
+			System.out.println(msg.toLowerCase());
+		System.out.println(msg);
+		msg = msg+" How r you";	// old memory get destroy msg refer to new memory with msg +"how r you"
+		System.out.println(msg);
+		System.out.println("----------------");
+		StringBuffer sb = new StringBuffer("Hello");
+		System.out.println(sb);
+			System.out.println(sb.append(" How r you"));
+		System.out.println(sb);
 		
+/*
+		Output
+		Hello
+		hello
+		Hello
+		Hello How r you
+		----------------
+		Hello
+		Hello How r you
+		Hello How r you
+*/
 	}
 }
