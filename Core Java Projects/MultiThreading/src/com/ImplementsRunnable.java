@@ -4,7 +4,9 @@ class C implements Runnable{
 	public void run() {
 		for(int i=0;i<10;i++) {
 			System.out.println("i "+i);
-			
+			try {
+			Thread.sleep(500);
+			}catch(Exception e) {}
 		}
 	}
 }
@@ -13,6 +15,9 @@ class D implements Runnable{
 	public void run() {
 		for(int j=0;j<10;j++) {
 			System.out.println("j "+j);
+			try {
+				Thread.sleep(1000);
+				}catch(Exception e) {}
 		}
 	}
 }
@@ -26,9 +31,7 @@ public class ImplementsRunnable {
 		Thread t2=new Thread(obj2);
 		t1.start();
 		t2.start();
-
 	}
-
 }
 
 /*
