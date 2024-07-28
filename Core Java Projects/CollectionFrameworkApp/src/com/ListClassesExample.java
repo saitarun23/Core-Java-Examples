@@ -3,6 +3,7 @@ package com;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 import java.util.Vector;
 
 public class ListClassesExample {
@@ -75,14 +76,36 @@ public class ListClassesExample {
 		[100, 20]
  */
 		//Vector
-		Vector ll=new Vector();
+/*		Vector ll=new Vector();
 		ll.add(10);						// part of list method
 		ll.addElement(20);				// part of vector method 
 		System.out.println(ll);
 		
-/*
 		Output
 		[10, 20]
+*/
+		
+		// Stack Operation
+/*		Stack ss = new Stack();
+		ss.push(100);
+		ss.push(200);
+		ss.push(300);
+		System.out.println(ss);
+		System.out.println("Pop "+ss.pop());		// remove top element 
+		System.out.println(ss);
+		System.out.println("Peek "+ss.peek());		// it display top element 
+		System.out.println(ss);
+		System.out.println("Search "+ss.search(100));
+		System.out.println("Search "+ss.search(1000));
+		
+		Output
+		[100, 200, 300]
+		Pop 300
+		[100, 200]
+		Peek 200
+		[100, 200]
+		Search 2
+		Search -1
 */
 	}
 }
