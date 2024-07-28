@@ -19,7 +19,8 @@ public class CharacterWiseClass {
 //				String name = br.readLine();
 //				System.out.println("your id is "+id);
 //				System.out.println("your name is "+name);
-				// source -> file targe --> file 
+				
+		// source -> file targe --> file 
 				FileReader fr = new FileReader("demo.txt");
 				FileWriter fw = new FileWriter("demo1.txt");
 				int ch;
@@ -29,7 +30,5 @@ public class CharacterWiseClass {
 				fr.close();
 				fw.close();
 				System.out.println("Data copied");
-
 	}
-
 }
