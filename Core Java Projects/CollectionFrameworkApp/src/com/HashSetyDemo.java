@@ -18,5 +18,9 @@ public class HashSetyDemo {
 		hs.add(new B());
 		System.out.println(hs);
 	}
-
 }
+
+/*
+	Output
+	[com.A@6dde5c8c, Ravi, 10.1, com.B@52525845, 10, true]
+*/
