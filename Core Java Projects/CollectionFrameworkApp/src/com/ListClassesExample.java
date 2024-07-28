@@ -3,6 +3,7 @@ package com;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 
 public class ListClassesExample {
 
@@ -38,7 +39,7 @@ public class ListClassesExample {
 */
 		
 		//LinkedList
-		LinkedList ll1=new LinkedList();
+/*		LinkedList ll1=new LinkedList();
 		ll1.add(10);
 		ll1.add(30);
 		ll1.add(50);
@@ -59,9 +60,8 @@ public class ListClassesExample {
 		System.out.println("last element "+ll1.getLast());
 		ll1.removeFirst();
 		ll1.removeLast();
-		System.out.println(ll1);
-		
-/*
+		System.out.println(ll1);	
+
 		Output
 		[10, 30, 50, 20, 80]
 		find value using index 30
@@ -73,7 +73,16 @@ public class ListClassesExample {
 		first element 10
 		last element 80
 		[100, 20]
-
  */
+		//Vector
+		Vector ll=new Vector();
+		ll.add(10);						// part of list method
+		ll.addElement(20);				// part of vector method 
+		System.out.println(ll);
+		
+/*
+		Output
+		[10, 20]
+*/
 	}
 }
