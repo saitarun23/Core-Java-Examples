@@ -47,8 +47,7 @@ public class ByteClasses {
 */
 		
 		// source --> file, target --> file or console
-		//FileInputStream fis = new FileInputStream("C:\\Users\\akash\\Desktop\\EC2 Plugin Install.txt");
-		FileInputStream fis = new FileInputStream("C:\\Java\\BirthdayProgram ");
+		FileInputStream fis = new FileInputStream("C:\\Java\\BirthdayProgram.txt ");
 		FileOutputStream fos = new FileOutputStream("demo.txt");
 		int ch;
 		while((ch=fis.read()) != -1) {		//EOF : end of the file in java is -1
