@@ -37,43 +37,61 @@ public class MapClasses {
 		get value null
 */		
 		// LinkedHashMap 
-//		Map mm = new LinkedHashMap();
-//		mm.put(3, "Ravi");
-//		mm.put(1, "Raju");
-//		mm.put(4, "Ramesh");
-//		mm.put(2, "Rajesh");
-//		mm.put("a", "b");
-//		mm.put(3, "Mahesh");
-//		mm.put(null, "c");
-//		mm.put(10, null);
-//		mm.put(null, null);
-//		System.out.println(mm);
-//		System.out.println("search key "+mm.containsKey(3));
-//		System.out.println("search key "+mm.containsKey(10));
-//		System.out.println("search value "+mm.containsValue("Ravi"));
-//		System.out.println("search value "+mm.containsValue("Mahesh"));
-//		System.out.println("get value "+mm.get(3));
-//		System.out.println("get value "+mm.get(30));
+/*		Map mm = new LinkedHashMap();
+		mm.put(3, "Ravi");
+		mm.put(1, "Raju");
+		mm.put(4, "Ramesh");
+		mm.put(2, "Rajesh");
+		mm.put("a", "b");
+		mm.put(3, "Mahesh");
+		mm.put(null, "c");
+		mm.put(10, null);
+		mm.put(null, null);
+		System.out.println(mm);
+		System.out.println("search key "+mm.containsKey(3));
+		System.out.println("search key "+mm.containsKey(10));
+		System.out.println("search value "+mm.containsValue("Ravi"));
+		System.out.println("search value "+mm.containsValue("Mahesh"));
+		System.out.println("get value "+mm.get(3));
+		System.out.println("get value "+mm.get(30));
 		
+		Output
+		{3=Mahesh, 1=Raju, 4=Ramesh, 2=Rajesh, a=b, null=null, 10=null}
+		search key true
+		search key true
+		search value false
+		search value true
+		get value Mahesh
+		get value null
+*/		
 		// TreeMap 
-//		Map mm = new TreeMap();
-//		mm.put(3, "Ravi");
-//		mm.put(1, "Raju");
-//		mm.put(4, "Ramesh");
-//		mm.put(2, "Rajesh");
-//		//mm.put("a", "b");
-//		mm.put(3, "Mahesh");
-//		//mm.put(null, "c");
-//		mm.put(10, null);
-//		//mm.put(null, null);
-//		System.out.println(mm);
-//		System.out.println("search key "+mm.containsKey(3));
-//		System.out.println("search key "+mm.containsKey(10));
-//		System.out.println("search value "+mm.containsValue("Ravi"));
-//		System.out.println("search value "+mm.containsValue("Mahesh"));
-//		System.out.println("get value "+mm.get(3));
-//		System.out.println("get value "+mm.get(30));
+		Map mm = new TreeMap();
+		mm.put(3, "Ravi");
+		mm.put(1, "Raju");
+		mm.put(4, "Ramesh");
+		mm.put(2, "Rajesh");
+		//mm.put("a", "b");
+		mm.put(3, "Mahesh");
+		//mm.put(null, "c");
+		mm.put(10, null);
+		//mm.put(null, null);
+		System.out.println(mm);
+		System.out.println("search key "+mm.containsKey(3));
+		System.out.println("search key "+mm.containsKey(10));
+		System.out.println("search value "+mm.containsValue("Ravi"));
+		System.out.println("search value "+mm.containsValue("Mahesh"));
+		System.out.println("get value "+mm.get(3));
+		System.out.println("get value "+mm.get(30));
 
+/*
+		Output
+		{1=Raju, 2=Rajesh, 3=Mahesh, 4=Ramesh, 10=null}
+		search key true
+		search key true
+		search value false
+		search value true
+		get value Mahesh
+		get value null
+*/
 	}
-
 }
