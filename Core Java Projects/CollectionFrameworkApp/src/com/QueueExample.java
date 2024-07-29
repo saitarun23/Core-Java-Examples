@@ -18,7 +18,15 @@ public class QueueExample {
 		System.out.println("remove elements "+q2.poll());
 		System.out.println(q1);
 		System.out.println(q2);
-
 	}
-
 }
+
+/*
+	Output
+	[1, 3, 5, 4, 9, 7]
+	[3, 1, 5, 4, 9, 7]
+	remove elements 1
+	remove elements 3
+	[3, 4, 5, 7, 9]
+	[1, 5, 4, 9, 7]
+*/
