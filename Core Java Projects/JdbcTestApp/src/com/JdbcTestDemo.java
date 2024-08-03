@@ -11,10 +11,30 @@ public class JdbcTestDemo {
 			System.out.println("Connected Successfuly");
 			Statement stmt=con.createStatement();
 			
-			int result=stmt.executeUpdate("insert into employee values(5,'neena',27000)");
+			//Insert query
+//			int result=stmt.executeUpdate("insert into employee values(1,'sai',14000)");
+//			if(result>0) {
+//				System.out.println("Record inserted successfully");
+//			}
+			
+			//delete query
+//			int result=stmt.executeUpdate("delete from employee where id=5");
+//			if(result>0) {
+//				System.out.println("Record deleted successfully");
+//			}
+//			else {
+//				System.out.println("Record not present");
+//			}
+			
+			// update 
+			
+			int result = stmt.executeUpdate("update employee set salary =45000 where id=2");
 			if(result>0) {
-				System.out.println("Record inserted successfully");
+				System.out.println("Record updated succesfully");
+			}else {
+				System.out.println("Record not present");
 			}
+			
 			stmt.close();
 			con.close();
 		}catch(Exception e) {
