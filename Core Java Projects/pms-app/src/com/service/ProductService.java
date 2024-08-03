@@ -7,46 +7,78 @@ import java.util.List;
 import com.bean.Product;
 
 public class ProductService {
-	
-	private List<Product> listOfProduct=new ArrayList<Product>();
-	
+
+	private List<Product> listOfProduct = new ArrayList<Product>();
+
 	public String addProduct(Product product) {
-		int flag=0;
-		if(listOfProduct.size()==0) {
-		listOfProduct.add(product);
-		return "Product added successfully";
-		}else {
+		int flag = 0;
+		if (listOfProduct.size() == 0) {
+			listOfProduct.add(product);
+			return "Product added successfully";
+		} else {
 			Iterator<Product> li = listOfProduct.iterator();
-			while(li.hasNext()) {
+			while (li.hasNext()) {
 				Product p = li.next();
-				if(p.getPid()==product.getPid()) {
+				if (p.getPid() == product.getPid()) {
 					flag++;
 					break;
 				}
 			}
 		}
-		if(flag>0) {
+		if (flag > 0) {
 			return "Product id must be unique";
-		}else {
+		} else {
 			listOfProduct.add(product);
-			flag=0;
+			flag = 0;
 			return "Product added successfully";
 		}
-		
 	}
-	
+
 	public String deleteProduct(int pid) {
-		return null;
-		
+		int flag = 0;
+
+		Iterator<Product> li = listOfProduct.iterator();
+		while (li.hasNext()) {
+			Product p = li.next();
+			if (p.getPid() == pid) {
+				li.remove();
+				flag++;
+				break;
+			}
+		}
+
+		if (flag > 0) {
+			flag = 0;
+			return "Product details removed successfully";
+		} else {
+			return "Product not present";
+		}
 	}
-	
+
 	public String updateProduct(Product product) {
-		return null;
-		
+		int flag = 0;
+
+		Iterator<Product> li = listOfProduct.iterator();
+		while (li.hasNext()) {
+			Product p = li.next();
+			if (p.getPid() == product.getPid()) {
+				p.setPrice(product.getPrice()); // new price replace
+				// p.setPrice(p.getPrice()+product.getPrice());
+				flag++;
+				break;
+			}
+		}
+
+		if (flag > 0) {
+			flag = 0;
+			return "Product price updated successfully";
+		} else {
+			return "Product not present";
+		}
 	}
-	
+
 	public List<Product> retrieveProduct() {
 		return null;
-		
+
 	}
 }
