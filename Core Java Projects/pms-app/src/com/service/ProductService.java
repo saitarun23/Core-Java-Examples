@@ -77,8 +77,25 @@ public class ProductService {
 		}
 	}
 
-	public List<Product> retrieveProduct() {
-		return null;
+	public String findPriceById(int pid) {
+		int flag = 0;
 
+		Iterator<Product> li = listOfProduct.iterator();
+		while (li.hasNext()) {
+			Product p = li.next();
+			if (p.getPid() == pid) {
+				flag++;
+				return "Your product price is " + p.getPrice();
+			}
+		}
+
+		if (flag == 0) {
+			return "Product not preset";
+		}
+		return null;
+	}
+
+	public List<Product> retrieveProduct() {
+		return listOfProduct;
 	}
 }
