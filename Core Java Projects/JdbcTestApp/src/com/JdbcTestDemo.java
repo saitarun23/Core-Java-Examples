@@ -27,7 +27,6 @@ public class JdbcTestDemo {
 //			}
 			
 			// update 
-			
 			int result = stmt.executeUpdate("update employee set salary =45000 where id=2");
 			if(result>0) {
 				System.out.println("Record updated succesfully");
