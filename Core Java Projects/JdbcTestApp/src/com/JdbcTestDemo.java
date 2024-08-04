@@ -94,17 +94,18 @@ public class JdbcTestDemo {
 //			}
 			
 			// retrieve with prepared statement with conditions. 
-			PreparedStatement pstmt = con.prepareStatement("select * from employee where salary>?");
-			System.out.println("Plz enter the salary");
-			float salary = sc.nextFloat();
-			pstmt.setFloat(1, salary);
-			ResultSet rs = pstmt.executeQuery();
-			while(rs.next()) {
-				System.out.println("id is "+rs.getInt(1)+" Name is "+rs.getString(2)+" Salary is "+rs.getFloat(3));
-			}
+//			PreparedStatement pstmt = con.prepareStatement("select * from employee where salary>?");
+//			System.out.println("Plz enter the salary");
+//			float salary = sc.nextFloat();
+//			pstmt.setFloat(1, salary);
+//			ResultSet rs = pstmt.executeQuery();
+//			while(rs.next()) {
+//				System.out.println("id is "+rs.getInt(1)+" Name is "+rs.getString(2)+" Salary is "+rs.getFloat(3));
+//			}
+//			
+//			rs.close();
+//			pstmt.close();
 			
-			rs.close();
-			pstmt.close();
 			
 			con.close();
 		}catch(Exception e) {
