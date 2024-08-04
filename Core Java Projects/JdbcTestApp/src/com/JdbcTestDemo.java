@@ -106,7 +106,7 @@ public class JdbcTestDemo {
 //			rs.close();
 //			pstmt.close();
 			
-			
+			//CallableStatement cstmt = con.prepareCall("{call mypr(?,?)}");
 			con.close();
 		}catch(Exception e) {
 			System.err.println(e);
