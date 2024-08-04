@@ -25,44 +25,19 @@ public class ProductService {
 	}
 
 	public String deleteProduct(int pid) {
-		int flag = 0;
-
-		Iterator<Product> li = listOfProduct.iterator();
-		while (li.hasNext()) {
-			Product p = li.next();
-			if (p.getPid() == pid) {
-				li.remove();
-				flag++;
-				break;
-			}
-		}
-
-		if (flag > 0) {
-			flag = 0;
-			return "Product details removed successfully";
-		} else {
+		
+		if(pd.deleteProduct(pid)>0) {
+			return "Product record deleted successfully";
+		}else {
 			return "Product not present";
 		}
 	}
 
 	public String updateProduct(Product product) {
-		int flag = 0;
-
-		Iterator<Product> li = listOfProduct.iterator();
-		while (li.hasNext()) {
-			Product p = li.next();
-			if (p.getPid() == product.getPid()) {
-				p.setPrice(product.getPrice()); // new price replace
-				// p.setPrice(p.getPrice()+product.getPrice());
-				flag++;
-				break;
-			}
-		}
-
-		if (flag > 0) {
-			flag = 0;
+		
+		if(pd.updateProduct(product)>0) {
 			return "Product price updated successfully";
-		} else {
+		}else {
 			return "Product not present";
 		}
 	}
