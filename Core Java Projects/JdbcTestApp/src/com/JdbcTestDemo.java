@@ -46,23 +46,65 @@ public class JdbcTestDemo {
 			
 			Scanner sc=new Scanner(System.in);
 			// insert record using PreparedStatement
-			PreparedStatement pstmt=con.prepareStatement("insert into employee values(?,?,?)");
-			System.out.println("Enter the id");
-			int id=sc.nextInt();
-					pstmt.setInt(1, id);
-					
-			System.out.println("Enter the name");
-			String name= sc.next();
-					pstmt.setString(2, name);
-					
-			System.out.println("Enter the salary");
-			float salary  = sc.nextFloat();
-					pstmt.setFloat(3, salary);
+//			PreparedStatement pstmt=con.prepareStatement("insert into employee values(?,?,?)");
+//			System.out.println("Enter the id");
+//			int id=sc.nextInt();
+//					pstmt.setInt(1, id);
+//					
+//			System.out.println("Enter the name");
+//			String name= sc.next();
+//					pstmt.setString(2, name);
+//					
+//			System.out.println("Enter the salary");
+//			float salary  = sc.nextFloat();
+//					pstmt.setFloat(3, salary);
+//			
+//			int result=pstmt.executeUpdate();
+//			if(result>0) {
+//				System.out.println("Record inserted....");
+//			}
 			
-			int result=pstmt.executeUpdate();
-			if(result>0) {
-				System.out.println("Record inserted....");
+			//Delete query using PreparedStatement
+//			PreparedStatement pstmt=con.prepareStatement("delete from employee where id=?");
+//			System.out.println("Enter the id");
+//			int id  = sc.nextInt();
+//			pstmt.setInt(1, id);
+//			int result = pstmt.executeUpdate();
+//			if(result>0) {
+//				System.out.println("Record deleted...");
+//			}else {
+//				System.out.println("Record not present");
+//			}
+			
+			// Updated query using PreparedStatement 
+//			PreparedStatement pstmt = con.prepareStatement("update employee set salary=? where id=?");
+//			System.out.println("Enter the id");
+//			int id  = sc.nextInt();
+//			System.out.println("Enter the salary to update");
+//			float salary = sc.nextFloat();
+//			
+//			pstmt.setFloat(1, salary);
+//			pstmt.setInt(2, id);
+//			
+//			int result = pstmt.executeUpdate();
+//			if(result>0) {
+//				System.out.println("Record updated...");
+//			}else {
+//				System.out.println("Record not present");
+//			}
+			
+			// retrieve with prepared statement with conditions. 
+			PreparedStatement pstmt = con.prepareStatement("select * from employee where salary>?");
+			System.out.println("Plz enter the salary");
+			float salary = sc.nextFloat();
+			pstmt.setFloat(1, salary);
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()) {
+				System.out.println("id is "+rs.getInt(1)+" Name is "+rs.getString(2)+" Salary is "+rs.getFloat(3));
 			}
+			
+			rs.close();
+			pstmt.close();
 			
 			con.close();
 		}catch(Exception e) {
