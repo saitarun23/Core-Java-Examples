@@ -21,11 +21,16 @@ public class LoginServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter pw=response.getWriter();
+		String emailid=request.getParameter("emailid");		//receiving text field value
+		String password = request.getParameter("password");
+		if(emailid.equals("akash@gmail.com") && password.equals("123")) {
+			pw.print("Successfuly login with get");
+		}else {
+			pw.println("failure try once again with get");
+		}
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
