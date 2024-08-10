@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter pw=response.getWriter();
 		String emailid=request.getParameter("emailid");		//receiving text field value
 		String password = request.getParameter("password");
-		
+		response.setContentType("text/html");
 		RequestDispatcher rd1=request.getRequestDispatcher("Home");
 		RequestDispatcher rd2=request.getRequestDispatcher("login.html");
 		
@@ -42,10 +42,15 @@ public class LoginServlet extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		String emailid = request.getParameter("emailid");  // receiving text field value
 		String password = request.getParameter("password");
+		response.setContentType("text/html");
+		RequestDispatcher rd1=request.getRequestDispatcher("Home");
+		RequestDispatcher rd2=request.getRequestDispatcher("login.html");
 		if(emailid.equals("akash@gmail.com") && password.equals("123")) {
 			pw.print("Successfuly login with post");
+			rd1.forward(request, response);
 		}else {
 			pw.println("failure try once again with post");
+			rd2.include(request, response);
 		}
 
 	}
