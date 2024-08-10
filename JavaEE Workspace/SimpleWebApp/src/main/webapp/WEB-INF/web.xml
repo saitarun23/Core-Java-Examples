@@ -29,4 +29,14 @@
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/LoginServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServletInfo</display-name>
+    <servlet-name>LoginServletInfo</servlet-name>
+    <servlet-class>com.LoginServletInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServletInfo</servlet-name>
+    <url-pattern>/LoginServletInfo</url-pattern>
+  </servlet-mapping>
 </web-app>
