@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,17 +11,10 @@
 <%
 emailid= request.getParameter("emailid");
 password = request.getParameter("password");
-
-if(emailid.equals("akash@gmail.com") && password.equals("123")){
-	out.println("Successfully login");
-	%>
-	<jsp:forward page="Home.jsp"></jsp:forward>
-	<%
-}else {
-	out.println("Failure try once again");
-	%>
-	<jsp:include page="login.jsp"></jsp:include>
-	<%
+try{
+		
+}catch(Exception e){
+	
 }
 %>
 </body>
