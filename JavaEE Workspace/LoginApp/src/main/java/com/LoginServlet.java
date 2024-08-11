@@ -42,15 +42,21 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter pw = response.getWriter();
+		// receive value from form 
 		String emailid = request.getParameter("emailid");
 		String password = request.getParameter("password");
 		
+		//created reference to navigate from one page to another 
 		RequestDispatcher rd1 = request.getRequestDispatcher("Home");
 		RequestDispatcher rd2 = request.getRequestDispatcher("login.html");
 		
+		// set response type as text as html by default plain text consider 
 		response.setContentType("text/html");
+		// convert password in reverse order 
 		StringBuffer sb = new StringBuffer(password);
 		password = sb.reverse().toString();  // convert password in reverse order. 
+		
+		// jdbc code 
 		try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_db", "root", "saivarun");
