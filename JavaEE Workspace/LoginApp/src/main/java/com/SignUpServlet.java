@@ -40,26 +40,25 @@ public class SignUpServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter pw=response.getWriter();
-		String emailid=request.getParameter("emailid");
-		String password=request.getParameter("password");
-		RequestDispatcher rd1=request.getRequestDispatcher("signup.html");
+		PrintWriter pw = response.getWriter();
+		String emailid = request.getParameter("emailid");
+		String password = request.getParameter("password");
+		RequestDispatcher rd1 = request.getRequestDispatcher("signup.html");
 		response.setContentType("text/html");
-		StringBuffer sb=new StringBuffer(password);
-		password=sb.reverse().toString();		//convert password in reverse order
+		StringBuffer sb = new StringBuffer(password);
+		password = sb.reverse().toString();  // convert password in reverse order. 
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/my_db\",\"root\",\"saivarun");
-			PreparedStatement pstmt=con.prepareStatement("insert into login values(?,?)");
-			pstmt.setString(1, emailid);
-			pstmt.setString(2, password);
-			int result=pstmt.executeUpdate();
-			if(result>0) {
-				pw.print("Account Created Successfully");
-				rd1.include(request, response);
-			}
-			
-		}catch (Exception e) {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_db", "root", "saivarun");
+		PreparedStatement pstmt = con.prepareStatement("insert into login values(?,?)");
+		pstmt.setString(1, emailid);
+		pstmt.setString(2, password);
+		int result = pstmt.executeUpdate();
+		if(result>0) {
+			pw.print("Account Created successfully ");
+			rd1.include(request, response);
+		}
+		} catch (Exception e) {
 			pw.print(e.getMessage());
 			rd1.include(request, response);
 		}
