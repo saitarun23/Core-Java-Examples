@@ -35,7 +35,10 @@ public class Home extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter pw=response.getWriter();
-		pw.println("Welcome to Home Page");
+		Object obj=request.getAttribute("user");
+		String name=(String)obj;
+		pw.println("<h2>Welcome to Home Page"+name+"</h2>");
+		pw.println("<a href='login.html'>logout</a>");
 	}
 
 }
