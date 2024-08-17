@@ -2,6 +2,9 @@ package com.pms.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.pms.bean.Product;
 import com.pms.resource.DbResource;
@@ -47,4 +50,23 @@ public class ProductDao {
 			return 0;
 		}
 	}
+	
+	public List<Product> findAllProducts() {
+		List<Product> listofproduct = new ArrayList<Product>();
+			try {
+				Connection con = DbResource.getDbConnection();
+				PreparedStatement pstmt = con.prepareStatement("select * from product");
+				ResultSet rs = pstmt.executeQuery();
+				while(rs.next()) {
+					Product p = new Product();
+					p.setPid(rs.getInt(1));
+					p.setPname(rs.getString(2));
+					p.setPrice(rs.getFloat(3));
+					listofproduct.add(p);
+				}
+			} catch (Exception e) {
+				System.err.println(e);
+			}
+			return listofproduct;
+		}
 }
