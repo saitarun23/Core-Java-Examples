@@ -23,4 +23,28 @@ public class ProductDao {
 		}
 	}
 
+	public int deleteProduct(int pid) {
+		try {
+			Connection con=DbResource.getDbConnection();
+			PreparedStatement pstmt=con.prepareStatement("delete from product where pid=?");
+			pstmt.setInt(1, pid);
+			return pstmt.executeUpdate();		
+		} catch (Exception e) {
+			System.err.println(e);
+			return 0;
+		}
+	}
+	
+	public int updateProduct(Product product) {
+		try {
+			Connection con = DbResource.getDbConnection();
+			PreparedStatement pstmt = con.prepareStatement("update product set price = ? where pid=?");
+			pstmt.setFloat(1, product.getPrice());
+			pstmt.setInt(2, product.getPid());
+			return pstmt.executeUpdate();
+		} catch (Exception e) {
+			System.err.println(e);
+			return 0;
+		}
+	}
 }
