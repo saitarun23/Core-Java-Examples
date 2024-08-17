@@ -1,7 +1,7 @@
 package com.pms.bean;
 
-public class Product {
-	private int pid;
+public class Product {					// map to table
+	private int pid;					// map to column
 	private String pname;
 	private float price;
 
