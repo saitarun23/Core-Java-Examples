@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h2>Delete Product</h2>
 
+
+
+<a href="index.html">Back</a>
 </body>
 </html>
