@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.pms.bean.Product;
 import com.pms.service.ProductService;
@@ -36,9 +37,12 @@ public class ProductViewController extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		ProductService ps = new ProductService();
 		List<Product> listofproduct = ps.findAllProduct();
-		request.setAttribute("listofproduct",listofproduct);
-		RequestDispatcher rd = request.getRequestDispatcher("view_product.jsp");
-		rd.forward(request, response);
+		HttpSession hs=request.getSession();
+		//request.setAttribute("listofproduct",listofproduct);		// request scope 
+		hs.setAttribute("listofproduct",listofproduct);				//// session scope 
+		//RequestDispatcher rd = request.getRequestDispatcher("view_product.jsp");
+		//rd.forward(request, response);
+		response.sendRedirect("view_product.jsp");
 	}
 
 	/**

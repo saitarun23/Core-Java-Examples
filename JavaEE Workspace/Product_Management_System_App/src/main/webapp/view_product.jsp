@@ -20,7 +20,8 @@
 		<th>Price</th>
 	</tr>
 	<%
-	Object obj = request.getAttribute("listofproduct");
+	//Object obj = request.getAttribute("listofproduct");
+	Object obj=session.getAttribute("listofproduct");
 	List<Product> listOfProduct = (List<Product>)obj;			// type casting for that type of object. 
 	Iterator<Product> li = listOfProduct.iterator();
 			while(li.hasNext()){
