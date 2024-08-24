@@ -14,7 +14,7 @@ public class LambdaOperation {
 		System.out.println("addition "+op1.add(100, 200));
 		Operation op2 = (a,b)->a+b;
 		System.out.println("addition "+op2.add(10, 20));
-		Operation op3 = (int a, int b)->a+b;
+		Operation op3 = (var a, var b)->a+b;
 		System.out.println("addition "+op3.add(1, 2));
 		Operation op4 = (m,n)->{
 			int add = m+n;
@@ -24,10 +24,13 @@ public class LambdaOperation {
 		
 		Info obj1=(name)->System.out.println("welcome user "+name);
 		obj1.greeting("sai");
-		Info obj2=(String name)->{
+		//Info obj2=(String name)->{  		java 8
+		Info obj2=(var name)->{      	  //java 11
 			System.out.println("Welcome user with multi line statement "+name);
 		};
 		obj2.greeting("tarun");
+		var a=10;			//declaring generic type of variable
+		//a="ravi";
 	}
 }
 
