@@ -23,13 +23,28 @@ public class LambdaExpressionExample {
 			@Override
 			public String sayHello() {
 				hello();
-				return "Welcome using Anonymous inner class";
+				return "Welcome using Anonymous inner class with 1st way";
 			}
 			public void hello() {
 				System.out.println("Hello method of anonymous class");
 			}
 		};
-		System.out.println(obj2.sayHello());
+		System.out.println(obj2.sayHello());	
+		Hello obj3=new Hello() {
+			@Override
+			public String sayHello() {
+				hello();
+				return "Welcome using Anonymous inner class with 2nd way";
+			}
+			public void hello() {
+				System.out.println("Hello method of anonymous class");
+			}
+		};
+		System.out.println(obj3.sayHello());
+		
+		//3rd using Lambda expression style
+		Hello obj4=()->"Welcome using Lambda expression";
+		System.out.println(obj4.sayHello());
 	}
 
 }
