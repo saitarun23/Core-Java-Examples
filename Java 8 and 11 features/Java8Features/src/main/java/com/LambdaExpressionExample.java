@@ -46,5 +46,12 @@ public class LambdaExpressionExample {
 		Hello obj4=()->"Welcome using Lambda expression";
 		System.out.println(obj4.sayHello());
 	}
-
 }
+
+/*
+ 	Output
+ 	Welcome using Anonymous inner class with 1st way
+	Hello method of anonymous class
+	Welcome using Anonymous inner class with 2nd way
+	Welcome using Lambda expression
+*/
