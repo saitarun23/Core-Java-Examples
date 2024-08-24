@@ -52,7 +52,7 @@ public class ProductStoreController extends HttpServlet {
 		
 		// created service class object 
 		ProductService ps = new ProductService();
-				
+		pw.print("product");		
 		// pass the object and get the result 
 		String result = ps.storeProduct(p);
 		pw.print(result);
