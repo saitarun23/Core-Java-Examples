@@ -36,5 +36,12 @@ public class InterfaceExample {
 		t1.dis3();
 		Abc.dis4();    // 	calling using interface name
 	}
-
 }
+
+/*
+ 	Output
+ 	Test class provided body for dis1 method
+	Test class default method override
+	dis3 default method
+	dis4 static method
+*/
