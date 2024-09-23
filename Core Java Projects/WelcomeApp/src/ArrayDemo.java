@@ -6,8 +6,8 @@ public class ArrayDemo {
 		System.out.println(abc);
 */		
 		
-/*		int xyz[]= {10,20,30,40,50,60,70,80};	// initialization of an array 
-		//System.out.println(xyz);
+/*	    int xyz[]= {10,20,30,40,50,60,70,80};	// initialization of an array 
+		System.out.println(xyz);
 		System.out.println("first value "+xyz[0]);
 		System.out.println("second value "+xyz[1]);
 		System.out.println("retreive the value using for loop");
@@ -21,6 +21,7 @@ public class ArrayDemo {
 		}
 		
 		Output
+		[I@6fb0d3ed
 		first value 10
 		second value 20
 		retreive the value using for loop
@@ -41,15 +42,15 @@ public class ArrayDemo {
 */
 		
 		// array memory creation in java 
-		int abc[]=new int[10];
-		System.out.println("size of array "+abc.length);
-	    System.out.println(abc[0]);
-		System.out.println(abc[9]);
-		//System.out.println(abc[10]);  // exception generated 
-		abc[0]=100;
-		abc[1]=200;
-		System.out.println("0 position value is "+abc[0]);
-		System.out.println("1 position value is "+abc[1]);
+//		int abc[]=new int[10];
+//		System.out.println("size of array "+abc.length);
+//	    System.out.println(abc[0]);
+//		System.out.println(abc[9]);
+//		//System.out.println(abc[10]);  // exception generated 
+//		abc[0]=100;
+//		abc[1]=200;
+//		System.out.println("0 position value is "+abc[0]);
+//		System.out.println("1 position value is "+abc[1]);
 			
 	}
 }

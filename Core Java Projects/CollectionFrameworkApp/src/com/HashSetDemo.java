@@ -3,7 +3,7 @@ package com;
 import java.util.HashSet;
 class A{}
 class B{}
-public class HashSetyDemo {
+public class HashSetDemo {
 
 	public static void main(String[] args) {
 		HashSet hs=new HashSet();

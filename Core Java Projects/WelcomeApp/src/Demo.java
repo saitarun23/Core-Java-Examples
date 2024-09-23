@@ -12,3 +12,12 @@ public class Demo {
 	}
 
 }
+
+/*
+	Output
+	Welcome to Java
+	Welcome to Java
+	Welcome to Java
+	Welcome to java
+	Welcome once again
+*/
